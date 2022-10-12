@@ -4,13 +4,40 @@ html,body {
     justify-content: center;
     height: 100vh;
     font-family: sans-serif;
-    background-color: #17151b;
+    background-color: #17151b; 
     overflow: hidden;
 }
 
 .externo {
     width: 300px;
     height: 300px;
-    background: #fff;
+    background: linear-gradient(135deg, #090630 0%, #093e79 50%, #00ffef 100%);
     border-radius: 50%;
+    animation: rotate 2s ease infinite;
+}
+
+.interno {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    text-align: center;
+    line-height: 275px;
+    background: #17151b;
+    border-radius: 50%;
+    cursor: default;
+}
+
+.interno span {
+    font-size: 60px;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(135deg, #1166c7 25%, #00ffef 100%);
+    -webkit-background-clip: text;
+    background-size: 100%;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
 }
